@@ -1,0 +1,222 @@
+
+:root {
+  /* colors */
+  --black: #000000;
+  --white: #ffffff;
+  --orange: #f06B32;
+  --grey: #f1f1f1;
+
+  /* shadow */
+  --shadow: 0 5px 5px hsla(0, 0%, 22%, 0.08);
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* header */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.header div {
+  margin: 20px;
+}
+
+.header div h1 {
+  margin: 3px 0px;
+  font-size: 28px;
+}
+
+.header div p {
+  margin: 0px 0px 5px 0px;
+  font-size: 16px;
+}
+
+.header img {
+  margin-left: 60px;
+}
+
+/* navbar*/
+#navbar {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: var(--white);
+  box-shadow:var(--shadow);
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: var(--black);
+  text-align: center;
+  padding: 16px 20px 16px 70px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  border-color: var(--grey);
+}
+
+#navbar a:hover{
+  color: var(--orange);
+  font-weight: 600;
+}
+
+#navbar a:last-child {
+  border-right: none;
+}
+
+#navbar a.active {
+  background-color: var(--white);
+  color: var(--orange);
+  font-weight: 600;
+}
+
+#navbar a.button {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: var(--orange);
+  border: none;
+  color: var(--white);
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 8px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 8px 50px 0px 20px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.content {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  border-radius: 50px;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.dropdown {
+  position: relative;
+  width: 280px;
+  border-radius: 50px;
+  background-color: var(--orange);
+  border: 3px solid var(--white);
+  cursor: pointer;
+}
+
+.dropdown-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: transparent;
+  padding: 1rem 1.5rem;
+  color: var(--white);
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 3rem;
+  width: 80%;
+  border-radius: 15px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--grey);
+  transition: max-height 0.5s;
+}
+
+.dropdown-list-item {
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 14px;
+  padding: 10px 0 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.3s ease, margin-left 0.2s ease;
+}
+
+.dropdown-list-item:hover {
+  margin-left: 0.5rem;
+  color: var(--orange);
+}
+
+#list.show {
+  max-height: 300px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  width: 100%;
+  color: var(--orange);
+}
+
+.search-box input {
+  padding: 1rem;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--orange);
+  border: 0;
+  outline: 0;
+}
+
+.search-box i {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.search-box input::placeholder {
+  font-weight: 500;
+  color: var(--orange);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image-icon" href="assets/images/icon.jpg"> 
+  <title>CLASSROOM RESERVATION SYSTEM - Home Page</title>
+  <!-- CSS link-->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+/>
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="homepage.html">
+      <img src="assets/images/logoECS.png" alt="" height="80" width="80">
+    </a>
+    <div>
+      <h1>Classroom reservation system</h1>
+      <p>Deprtment of Elecrical Engineering Fculty of Engineering and Industrial Technology<br> Silpakorn University</p>
+    </div>
+  </div>
+
+  <div id="navbar">
+    <a class="active" href="home.html">Home</a>
+    <a href="classroom.htlm">Classroom</a>
+    <a href="index.html" class="button" style="float:right"><span>Log out</span></a>
+    <a href="profile.htlm" style="float:right" >Profile</a>
+  </div>
+  
+  <div class="content">
+
+    <div class="search-bar">
+      <div class="dropdown">
+        <div id="drop-text" class="dropdown-text">
+          <span id="span">Everything</span>
+            <i id="icon" class="fa-solid fa-chevron-down"></i>
+        </div>
+        <ul id="list" class="dropdown-list">
+          <li class="dropdown-list-item">Everything</li>
+          <li class="dropdown-list-item">Room</li>
+          <li class="dropdown-list-item">Date</li>
+          <li class="dropdown-list-item">Capacity</li>
+        </ul>
+      </div>
+      
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search anything..." />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- JS link-->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
