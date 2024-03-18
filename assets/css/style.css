@@ -7,7 +7,8 @@
   --grey: #f1f1f1;
 
   /* shadow */
-  --shadow: 0 5px 5px hsla(0, 0%, 22%, 0.08);
+  --shadow: 0 10px 5px hsla(0, 0%, 22%, 0.08);
+  --shadow2: 10px 10px 10px hsla(0, 0%, 22%, 0.08);
 }
 
 body {
@@ -121,11 +122,12 @@ body {
 
 .index {
   display: flex;
+  background-color: var(--orange);
   justify-content: center;
   justify-items: center;
   align-items: center;
   color: var(--white);
-  margin: 10%;
+  padding-top: 15%;
 }
 
 .index div {
@@ -135,6 +137,7 @@ body {
 .index h1 {
   margin: 5px 0px;
   font-size: 50px;
+  text-shadow: var(--shadow);
 }
 
 .index div p {
@@ -154,10 +157,17 @@ body {
   width: 100px;
   transition: all 0.5s;
   cursor: pointer;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow2);
   position: relative;
   text-decoration: none;
+  
 }
+
+.button-white:hover{
+  background-color: var(--grey);
+  color: var(--orange);
+}
+
 
 .content {
   padding: 16px;
