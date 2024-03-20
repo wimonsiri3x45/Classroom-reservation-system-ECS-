@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Css/css-profile.css">
+  <link rel="icon" type="image-icon" href="icon/icon.jpg"> 
+<title>Profile</title>
+</head>
+
+<body>
+    <section class="header-section">
+        <div class="header">
+            <a href="">
+                <img src="icon/logoEE.png" alt="" height="80" width="80">
+            </a>
+            <div>
+                <h1>Classroom reservation system</h1>
+                <p>elecrical engineering<br> faculty of engineering and industrial technology<br> silpakorn university</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!--content-section-->
+    <div class="content-body">
+        <div class="leftside-navbar">
+            <img src="icon/circle-user.png" alt="" height="80" width="80">
+            <span>ดวงจันทร์ ใจดี <br>*****@gmail.com</span>
+            <div class="nav-container">
+                <ul class="nav-link"><li><a href="้homepage.html">HOME</a></li>
+                    <li><a href="Booking status.html">รายการจอง</a></li>
+                    <li><a href="Booking editable.html">แก้ไขการจอง</a></li>
+                    <li class="a-person-color"><a href="personal information.html">ข้อมูลส่วนตัว</a></li>
+                </ul>
+            </div>
+            <button class="logout-btn">Log out</button>
+        </div>
+<!--Booking status-->
+        <div class="rightside-content">
+            <div class="search-group">
+                <form class="search-wrap" action="/action.php" method="post">
+                    <input type="text" placeholder="Search..." name="search-frm">
+                    <button type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </button>  
+                </form>                            
+            </div>
+            <div class="profile-container">
+               <h3>ข้อมูลส่วนตัว</h3>
+                <div class="wrap-form">
+                    <div class="form-group2">
+                        <p>Student ID</p>
+                        <input type="text" class="form-input">
+                    </div>
+                    <div class="form-group2">
+                        <p>First name</p>
+                        <input type="text" class="form-input">
+                    </div>
+                    <div class="form-group2">
+                        <p>Last name</p>
+                        <input type="text" class="form-input">                    
+                    </div>
+                </div>
+                <div class="wrap-form">
+                    <div class="form-group2">
+                        <p>Status</p>
+                        <input type="text" class="form-input">
+                    </div>
+                    <div class="form-group2">
+                        <p>Phone number</p>
+                        <input type="tel" class="form-input">
+                    </div>
+                </div>
+                <div class="wrap-form">
+                    <div class="form-group2">
+                        <p>Username</p>
+                        <input type="text" class="form-input">
+                    </div>
+                    <div class="form-group2">
+                        <p>Email</p>
+                        <input type="email" class="form-input">
+                    </div>
+                </div>
+               <div><p>Change password</p></div>
+               <div class="wrap-form">
+                <div class="form-group2">
+                        <p>New password</p>
+                        <input type="password" class="form-input">
+                </div>
+                <div class="form-group2">
+                        <p>Repeat password</p>
+                        <input type="password" class="form-input">
+                </div>
+               </div>
+               <input type="submit" class="save-btn" value="SAVE">
+            </div>
+            </div>
+        </div>
+    </div>
