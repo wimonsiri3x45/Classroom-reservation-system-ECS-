@@ -198,6 +198,50 @@ body {
   color: var(--orange);
 }
 
+.button-red{
+  display: inline-block;
+  border-radius: 10px;
+  background-color: var(--red);
+  color: var(--white);
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-shadow: var(--shadow);
+  margin: 10px;
+  padding: 10px 20px 10px 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+}
+
+.button-red:hover{
+  background-color: var(--white);
+  color: var(--red);
+}
+
+.button-green{
+  display: inline-block;
+  border-radius: 10px;
+  background-color: var(--green);
+  color: var(--white);
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-shadow: var(--shadow);
+  margin: 10px;
+  padding: 10px 20px 10px 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+}
+
+.button-green:hover{
+  background-color: var(--white);
+  color: var(--green);
+}
+
 /* navbar sticky */
 .content {
   padding: 16px;
@@ -313,7 +357,6 @@ body {
 }
 
 .dropdown-op{
-
   display: inline-block;
   cursor: pointer;
 }
@@ -462,23 +505,31 @@ button[type="submit"]:hover {
   background-color: var(--black);
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 9999;
+  text-align: center;
 }
 
 .popup-window {
   position: relative;
   border-radius: 10px;
   background-color: var(--white);
-  width: 50%;
+  width: 10%;
   margin: 10% auto;
   padding: 20px;
 }
 
+.popup-window h2{
+  color: var(--orange);
+  text-shadow: var(--shadow);
+  text-align: left;
+  padding-left: 20px;
+}
+
 .popup-window.small {
-  width: 75%;
+  width: 30%;
 }
 
 .popup-window.large {
-  width: 75%;
+  width: 60%;
 }
 
 .close {

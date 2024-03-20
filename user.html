@@ -54,13 +54,18 @@
     </div>
     <a data-target="add-user" data-toggle="popup" class="button-orange"> + User </a></div>
     <div id="add-user" class="popup">
-      <div class="popup-window">
+      <div class="popup-window large">
           <span class="close" data-dismiss="popup">&times;</span>
-
-          <h3>Dismiss with [&times;] button</h3>
-  
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button data-dismiss="popup">Close</button>
+          <h2>Add User</h2>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <a data-dismiss="popup" class="button-green">Submit</a>
       </div>
   </div>
   </div>
@@ -89,22 +94,18 @@
             <button class="dropbtn-op">Option <i id="icon" class="fa-solid fa-chevron-down"></i></button>
 
             <div class="dropdown-content-op">
-              <a data-target="simpleModal_1" data-toggle="popup">Look</a>
+              <a data-target="look-user" data-toggle="popup">Look</a>
 
               <a data-target="simpleModal_1" data-toggle="popup">Edit</a>
 
-              <a data-target="simpleModal_1" data-toggle="popup">Delete</a>
+              <a data-target="delete-user" data-toggle="popup">Delete</a>
             </div>
-            
+
           </div>
         </td>
       </tr>
     </table>
   </div>
-  
-  <button data-target="simpleModal_1" data-toggle="popup">Dismiss modal with a custom button</button>
-  <button data-target="simpleModal_2" data-toggle="popup">Dismiss modal with [&times;] button</button>
-
 
 <div id="simpleModal_1" class="popup">
     <div class="popup-window">
@@ -122,6 +123,32 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <button data-dismiss="popup">Close</button>
     </div>
+</div>
+
+<!-- ต้องแก้ตอนลิ้งข้อมูลจากฐานข้อมูลมาอีกที-->
+<div id="look-user" class="popup">
+  <div class="popup-window small">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <h3>630911111</h3>
+      <h1>สวัสดี วันจันทร์</h1>
+      <p>นักศึกษา</p>
+      <p>เบอร์โทร: 0800000000   Email: สวัสดี@email.com</p>
+      <p>Username: Password: </p>
+  </div>
+</div>
+
+<div id="delete-user" class="popup">
+  <div class="popup-window small">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <svg width="142" height="126" viewBox="0 0 142 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40.2911 1.15327C41.1233 0.414842 42.252 0 43.4289 0H98.5711C99.748 0 100.877 0.414842 101.709 1.15327L140.7 35.7513C141.532 36.4897 142 37.4912 142 38.5355V87.4645C142 88.5088 141.532 89.5103 140.7 90.2487L101.709 124.847C100.877 125.585 99.748 126 98.5711 126H43.4289C42.252 126 41.1233 125.585 40.2911 124.847L1.29971 90.2487C0.467521 89.5103 0 88.5088 0 87.4645V38.5355C0 37.4912 0.467521 36.4897 1.29971 35.7513L40.2911 1.15327ZM45.267 7.875L8.875 40.1665V85.8335L45.267 118.125H96.733L133.125 85.8335V40.1665L96.733 7.875H45.267Z" fill="#F06B32"/>
+        <path d="M62.1387 86.625C62.1387 82.2758 66.1122 78.75 71.0137 78.75C75.9152 78.75 79.8887 82.2758 79.8887 86.625C79.8887 90.9742 75.9152 94.5 71.0137 94.5C66.1122 94.5 62.1387 90.9742 62.1387 86.625Z" fill="#F06B32"/>
+        <path d="M63.0081 39.3359C62.5353 35.1405 66.2482 31.5 71 31.5C75.7518 31.5 79.4647 35.1405 78.9919 39.3359L75.8791 66.957C75.6284 69.1812 73.5191 70.875 71 70.875C68.4809 70.875 66.3716 69.1812 66.121 66.957L63.0081 39.3359Z" fill="#F06B32"/>
+        </svg>        
+      <h2>คุณต้องการลบบัญชีนี้ใช่หรือไม่?</h2>
+      <a data-dismiss="popup" class="button-green">Yes</a>
+      <a data-dismiss="popup" class="button-red">No</a>
+  </div>
 </div>
 
   <!-- JS link-->
