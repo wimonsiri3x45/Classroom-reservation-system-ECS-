@@ -48,3 +48,24 @@ for (item of listItems) {
   };
 }
 /* Search Bar ends */
+
+document.addEventListener('click', function (e) {
+  e = e || window.event;
+  var target = e.target || e.srcElement;
+
+  if (target.hasAttribute('data-toggle') && target.getAttribute('data-toggle') == 'popup') {
+      if (target.hasAttribute('data-target')) {
+          var m_ID = target.getAttribute('data-target');
+          document.getElementById(m_ID).classList.add('open-popup');
+          e.preventDefault();
+      }
+  }
+
+  // Close modal window with 'data-dismiss' attribute or when the backdrop is clicked
+  if ((target.hasAttribute('data-dismiss') && target.getAttribute('data-dismiss') == 'popup') || target.classList.contains('popup')) {
+      var popup = document.querySelector('[class="popup open-popup"]');
+      popup.classList.remove('open-popup');
+      e.preventDefault();
+  }
+}, false);
+

@@ -5,10 +5,14 @@
   --white: #ffffff;
   --orange: #f06B32;
   --grey: #f1f1f1;
+  --dark-grey: #aaaaaa;
+  --green: #27AE60;
+  --red: #EE1818;
 
   /* shadow */
-  --shadow: 0 10px 5px hsla(0, 0%, 22%, 0.08);
+  --shadow: 0 5px 5px hsla(0, 0%, 22%, 0.08);
   --shadow2: 10px 10px 10px hsla(0, 0%, 22%, 0.08);
+  --shadow3: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 
@@ -147,7 +151,7 @@ body {
   font-size: 17px;
 }
 
-/* button index*/
+/* button */
 .button-white {
   display: inline-block;
   border-radius: 10px;
@@ -158,15 +162,39 @@ body {
   font-weight: 600;
   padding: 8px;
   width: 100px;
+  margin: 10px;
   transition: all 0.5s;
   cursor: pointer;
   box-shadow: var(--shadow2);
+  text-shadow: var(--shadow);
   position: relative;
   text-decoration: none;
 }
 
 .button-white:hover{
   background-color: var(--grey);
+  color: var(--orange);
+}
+
+.button-orange{
+  display: inline-block;
+  border-radius: 10px;
+  background-color: var(--orange);
+  color: var(--white);
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-shadow: var(--shadow);
+  margin: 10px;
+  padding: 10px 20px 10px 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+}
+
+.button-orange:hover{
+  background-color: var(--white);
   color: var(--orange);
 }
 
@@ -178,7 +206,7 @@ body {
 }
 
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
 }
@@ -195,10 +223,10 @@ body {
   border-radius: 50px;
   background-color: var(--white);
   box-shadow: var(--shadow);
+  margin-right: 20px;
 }
 
 .dropdown {
-  position: relative;
   width: 280px;
   border-radius: 50px;
   background-color: var(--orange);
@@ -219,8 +247,8 @@ body {
 
 .dropdown-list {
   position: absolute;
-  top: 3rem;
-  width: 80%;
+  top: 37%;
+  width: 10%;
   border-radius: 15px;
   max-height: 0;
   overflow: hidden;
@@ -273,6 +301,47 @@ body {
   font-weight: 500;
   color: var(--orange);
 }
+
+/* dropdown-option */
+.dropbtn-op{
+  color: var(--orange);
+  font-weight: 600;
+  background-color: var(--white);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dropdown-op{
+
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-content-op{
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 100px;
+  z-index: 1;
+  box-shadow: var(--shadow);
+  padding-top: 5px;
+}
+
+.dropdown-content-op a {
+  color: var(--black);
+  font-weight: 500;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-op a:hover {background-color: var(--grey)}
+
+.dropdown-op:hover .dropdown-content-op {
+  display: block;
+}
+
 
 /* login */
 .login-container {
@@ -348,3 +417,90 @@ button[type="submit"]:hover {
   margin: 10px 0 10px 0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+
+.table-container{
+  display: flex;
+  border-radius: 10px;
+  border: 2px solid var(--grey);
+  box-shadow: var(--shadow);
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+#customers {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px;
+}
+
+#customers td{
+  border: none;
+  padding: 10px 0 10px 25px;
+  border-bottom: 1px solid var(--grey);
+  font-size: 14px;
+}
+
+#customers tr{
+  margin-right: 10px;
+}
+
+#customers th {
+  padding: 15px 0 12px 25px;
+  text-align: left;
+  color: var(--black);
+  border-bottom: 1px solid var(--black);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  overflow: auto;
+  background-color: var(--black);
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.popup-window {
+  position: relative;
+  border-radius: 10px;
+  background-color: var(--white);
+  width: 50%;
+  margin: 10% auto;
+  padding: 20px;
+}
+
+.popup-window.small {
+  width: 75%;
+}
+
+.popup-window.large {
+  width: 75%;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--dark-grey);
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--black);
+  cursor: pointer;
+}
+
+.open-popup {
+  display: block;
+}
+
