@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F06B32;
+    background-size: cover;
+    color: #ffffff;
+    text-align: left;
+  }
+ .header {
+  display: flex;
+  align-items: center;
+  margin: 0px 10px;
+ }
+ .header div {
+  margin-left: 15px;
+ }
+ .header div h1 {
+  margin: 10px 0px;
+ }
+ .header div p {
+  margin: 0px 0px 10px 0px;
+ }
+  .content-body {
+  display: flex;
+ }
+ .leftside-navbar {
+  display: flex;
+  flex-direction: column;  
+  color: black;
+  align-items: center;
+  flex: 13%;
+  background-color: #f1f1f1;
+  padding:20px 20px 300px 20px; /*ลบได้*/
+ }
+ .leftside-navbar span{
+  text-align: center;
+  margin-top: 15px;
+ }
+ .leftside-navbar ul{
+  list-style-type: none;  
+  padding: 0;
+  border: 2px rgb(50, 51, 52);
+ }
+ .leftside-navbar li {
+ 
+  text-align: center;
+  margin: 10px 0;
+  }
+ .leftside-navbar li a {
+  text-decoration: none;
+  color: black;
+ }
+ .leftside-navbar li.a-person-color a{
+  color: #F06B32;
+ }
+ button.logout-btn {
+  background-color:#F06B32; 
+  border: none;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24);
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+ }
+ button.logout-btn:hover {
+  background-color: #e05c1a;
+ }
+  input[type=submit] {
+  background-color:#F06B32; 
+  border: none;
+  color: #ffffff;
+  margin-top: 10px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24);
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  }
+  input[type=submit]:hover {
+  background-color: #e05c1a;
+  }
+ .rightside-content {
+  flex: 87%;
+  text-align: center;
+  color: black;
+  background-color: rgb(218, 218, 218);
+  padding: 20px 100px;
+ }
+ .search-group {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  align-items: center;
+ }
+ form.search-wrap{
+  display: flex;
+  align-items: center;
+ }
+ form.search-wrap input[type=text] {
+  border-color: #F06B32;
+  border: 2px solid rgb(234, 104, 17);
+  height: 25px;
+  width: 300px;
+  padding: 5px;  
+ }
+ form.search-wrap button{
+  display: flex;
+  align-items: center;
+  background:#F06B32;
+  color: #f1f1f1;
+  border: 2px solid rgb(234, 104, 17);
+  height: 37px;
+  
+}
+ .booking-container{
+  background-color: #f1f1f1;
+  box-shadow: 0 0 15px 1px rgba(85, 83, 83, 0.384);
+  padding: 15px;
+  margin: 20px 0px;
+  border-radius: 10px;
+  text-align: center;
+ }
+ .profile-container {
+  background-color: #f1f1f1;
+  box-shadow: 0 0 15px 1px rgba(85, 83, 83, 0.384);
+  padding: 15px;
+  margin: 40px 0px;
+  border-radius: 10px;
+  text-align: center;
+ }
+ .form-group2 {
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+ }
+ .form-group2 p {
+  margin-bottom: 0;
+ }
+ input.form-input {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+ }
+ .wrap-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+ }
