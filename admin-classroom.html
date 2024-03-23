@@ -3,9 +3,9 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image-icon" href="assets/images/icon.jpg"> 
-  <title>CLASSROOM RESERVATION SYSTEM - Reservation List</title>
+  <title>CLASSROOM RESERVATION SYSTEM - Classroom</title>
   <!-- CSS link-->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -26,11 +26,11 @@
 
   <div id="navbar">
     <a href="admin.html">Home</a>
-    <a class="active" href="list.html">Reservation List</a>
-    <a href="classroom-admin.html">Classroom</a>
-    <a href="user.html">User</a>
+    <a href="admin-list.html">Reservation List</a>
+    <a class="active" href="admin-classroom.html">Classroom</a>
+    <a href="admin-user.html">User</a>
     <a href="index.html" class="button-logout" style="float:right"><span>Log out</span></a>
-    <a href="profile-admin.html" style="float:right" >Profile</a>
+    <a href="admin-profile.html" style="float:right" >Profile</a>
   </div>
   
   <div class="content">
@@ -43,8 +43,9 @@
         <ul id="list" class="dropdown-list">
           <li class="dropdown-list-item">Everything</li>
           <li class="dropdown-list-item">ID</li>
-          <li class="dropdown-list-item">Name</li>
-          <li class="dropdown-list-item">Email</li>
+          <li class="dropdown-list-item">Room</li>
+          <li class="dropdown-list-item">type</li>
+          <li class="dropdown-list-item">Capacity</li>
         </ul>
       </div>
       <div class="search-box">
@@ -52,30 +53,25 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>   
     </div>
+    <a href="" class="button-orange"> + Room </a></div>
+    
   </div>
-  
-  <div class="content">
 
-  </div>
   <div class="table-container">
     <table id="customers">
       <tr>
-        <th>No.</th>
         <th>ID</th>
-        <th>Name-Surname</th>
-        <th>Position</th>
-        <th>Phone</th>
-        <th>Email</th>
+        <th>Name</th>
+        <th>type</th>
+        <th>Capacity</th>
         <th>Option</th>
       </tr>
 
       <tr>
-        <td>1</td>
-        <td>630911111</td>
+        <td>501</td>
+        <td>m.501</td>
+        <td>Lecture</td>
         <td>สวัสดี วันจันทร์</td>
-        <td>นักศึกษา</td>
-        <td>0800000000</td>
-        <td>สวัสดี@email.com</td>
         <td>
           <div class="dropdown-op">
             <button class="dropbtn-op">Option <i id="icon" class="fa-solid fa-chevron-down"></i></button>

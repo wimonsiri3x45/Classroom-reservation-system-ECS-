@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image-icon" href="assets/images/icon.jpg"> 
+  <title>CLASSROOM RESERVATION SYSTEM - Reservation List</title>
+  <!-- CSS link-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+/>
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="admin.html">
+      <img src="assets/images/logoECS.png" alt="" height="80" width="80">
+    </a>
+    <div>
+      <h1>Classroom reservation system</h1>
+      <p>Deprtment of Elecrical Engineering Faculty of Engineering and Industrial Technology<br> Silpakorn University</p>
+    </div>
+  </div>
+
+  <div id="navbar">
+    <a href="admin.html">Home</a>
+    <a class="active" href="admin-list.html">Reservation List</a>
+    <a href="admin-classroom.html">Classroom</a>
+    <a href="admin-user.html">User</a>
+    <a href="index.html" class="button-logout" style="float:right"><span>Log out</span></a>
+    <a href="admin-profile.html" style="float:right" >Profile</a>
+  </div>
+  
+  <div class="content">
+    <div class="search-bar">
+      <div class="dropdown">
+        <div id="drop-text" class="dropdown-text">
+          <span id="span">Everything</span>
+            <i id="icon" class="fa-solid fa-chevron-down"></i>
+        </div>
+        <ul id="list" class="dropdown-list">
+          <li class="dropdown-list-item">Everything</li>
+          <li class="dropdown-list-item">Date</li>
+          <li class="dropdown-list-item">Classroom</li>
+          <li class="dropdown-list-item">Booker's name</li>
+          <li class="dropdown-list-item">Status</li>
+        </ul>
+      </div>
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search anything..." />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>   
+    </div>
+  </div>
+
+  </div>
+  <div class="table-container">
+    <table id="customers">
+      <tr>
+        <th>No.</th>
+        <th>Date</th>
+        <th>Classroom</th>
+        <th>Booker's name</th>
+        <th>Capacity</th>
+        <th>Status</th>
+        <th>Approval</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>01/03/67 [12:00-13:00 น.]</td>
+        <td>ท.501</td>
+        <td>สวัสดี วันจันทร์</td>
+        <td>27/30</td>
+        <td>Waiting</td>
+        <td>
+          <div class="dropdown-op">
+            <button class="dropbtn-op">Option <i id="icon" class="fa-solid fa-chevron-down"></i></button>
+
+            <div class="dropdown-content-op">
+              <a data-target="approve" data-toggle="popup">Approve</a>
+          
+              <a data-target="cancel" data-toggle="popup">Cancel</a>
+            </div>
+
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+<!-- popup Appove -->
+<div id="approve" class="popup">
+  <div class="popup-window small">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <svg width="142" height="126" viewBox="0 0 142 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40.2911 1.15327C41.1233 0.414842 42.252 0 43.4289 0H98.5711C99.748 0 100.877 0.414842 101.709 1.15327L140.7 35.7513C141.532 36.4897 142 37.4912 142 38.5355V87.4645C142 88.5088 141.532 89.5103 140.7 90.2487L101.709 124.847C100.877 125.585 99.748 126 98.5711 126H43.4289C42.252 126 41.1233 125.585 40.2911 124.847L1.29971 90.2487C0.467521 89.5103 0 88.5088 0 87.4645V38.5355C0 37.4912 0.467521 36.4897 1.29971 35.7513L40.2911 1.15327ZM45.267 7.875L8.875 40.1665V85.8335L45.267 118.125H96.733L133.125 85.8335V40.1665L96.733 7.875H45.267Z" fill="#F06B32"/>
+        <path d="M46.6391 45.5659C46.5717 46.6386 47.5692 47.5076 48.78 47.5076H56.0973C57.3227 47.5076 58.297 46.621 58.4616 45.5436C59.2511 40.3765 63.2477 36.6103 70.3718 36.6103C76.456 36.6103 82.0333 39.3096 82.0333 45.808C82.0333 50.8068 78.7095 53.1063 73.4703 56.6054C67.4987 60.4545 62.7665 64.9534 63.1045 72.2516L63.1309 73.9589C63.1475 75.0356 64.1359 75.9007 65.3494 75.9007H72.5472C73.7726 75.9007 74.766 75.0193 74.766 73.9319V73.1014C74.766 67.4528 77.1884 65.8032 83.7233 61.4042C89.1315 57.7551 94.7651 53.7061 94.7651 45.2082C94.7651 33.3111 83.4416 27.5625 71.0478 27.5625C59.8025 27.5625 47.478 32.2136 46.6391 45.5659ZM60.4568 90.947C60.4568 95.146 64.2313 98.2452 69.4141 98.2452C74.8223 98.2452 78.5405 95.146 78.5405 90.947C78.5405 86.5981 74.8223 83.5488 69.4141 83.5488C64.2313 83.5488 60.4568 86.5981 60.4568 90.947Z" fill="#F06B32"/>
+        </svg>                      
+      <h2>ต้องการอนุมัติการจองนี้ใช่หรือไม่?</h2>
+      <a data-dismiss="popup" data-target="approved" data-toggle="popup" class="button-green">Yes</a>
+      <a data-dismiss="popup" class="button-red">No</a>
+  </div>
+</div>
+<div id="approved" class="popup">
+  <div class="popup-window small">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <svg width="125" height="122" viewBox="0 0 125 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M62.5 114.375C32.2969 114.375 7.8125 90.4782 7.8125 61C7.8125 31.5218 32.2969 7.625 62.5 7.625C92.7031 7.625 117.188 31.5218 117.188 61C117.188 90.4782 92.7031 114.375 62.5 114.375ZM62.5 122C97.0178 122 125 94.6894 125 61C125 27.3106 97.0178 0 62.5 0C27.9822 0 0 27.3106 0 61C0 94.6894 27.9822 122 62.5 122Z" fill="#05E300"/>
+        <path d="M85.7005 37.8937C85.6452 37.9477 85.5933 38.0048 85.5451 38.0648L58.4172 71.8027L42.0615 55.8396C39.7733 53.6063 36.0634 53.6063 33.7751 55.8396C31.4869 58.0729 31.4869 61.6938 33.7751 63.9271L54.4505 84.1063C56.7387 86.3396 60.4487 86.3396 62.7369 84.1063C62.7879 84.0565 62.836 84.0041 62.881 83.9492L94.0701 45.8985C96.2748 43.6593 96.2471 40.0996 93.9869 37.8937C91.6987 35.6604 87.9887 35.6604 85.7005 37.8937Z" fill="#05E300"/>
+      </svg>                       
+      <h2>อนุมัติเรียบร้อย</h2>
+  </div>
+</div>
+
+<!-- popup Cancel -->
+<div id="cancel" class="popup">
+  <div class="popup-window small">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <svg width="142" height="126" viewBox="0 0 142 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40.2911 1.15327C41.1233 0.414842 42.252 0 43.4289 0H98.5711C99.748 0 100.877 0.414842 101.709 1.15327L140.7 35.7513C141.532 36.4897 142 37.4912 142 38.5355V87.4645C142 88.5088 141.532 89.5103 140.7 90.2487L101.709 124.847C100.877 125.585 99.748 126 98.5711 126H43.4289C42.252 126 41.1233 125.585 40.2911 124.847L1.29971 90.2487C0.467521 89.5103 0 88.5088 0 87.4645V38.5355C0 37.4912 0.467521 36.4897 1.29971 35.7513L40.2911 1.15327ZM45.267 7.875L8.875 40.1665V85.8335L45.267 118.125H96.733L133.125 85.8335V40.1665L96.733 7.875H45.267Z" fill="#F06B32"/>
+        <path d="M62.1387 86.625C62.1387 82.2758 66.1122 78.75 71.0137 78.75C75.9152 78.75 79.8887 82.2758 79.8887 86.625C79.8887 90.9742 75.9152 94.5 71.0137 94.5C66.1122 94.5 62.1387 90.9742 62.1387 86.625Z" fill="#F06B32"/>
+        <path d="M63.0081 39.3359C62.5353 35.1405 66.2482 31.5 71 31.5C75.7518 31.5 79.4647 35.1405 78.9919 39.3359L75.8791 66.957C75.6284 69.1812 73.5191 70.875 71 70.875C68.4809 70.875 66.3716 69.1812 66.121 66.957L63.0081 39.3359Z" fill="#F06B32"/>
+        </svg>
+                      
+      <h2>ต้องการยกเลิกการจองนี้ใช่หรือไม่?</h2>
+      <a data-dismiss="popup" data-target="canceled" data-toggle="popup" class="button-green">Yes</a>
+      <a data-dismiss="popup" class="button-red">No</a>
+  </div>
+</div>
+<div id="canceled" class="popup">
+  <div class="popup-window small">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <svg width="125" height="122" viewBox="0 0 125 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M62.5 114.375C32.2969 114.375 7.8125 90.4782 7.8125 61C7.8125 31.5218 32.2969 7.625 62.5 7.625C92.7031 7.625 117.188 31.5218 117.188 61C117.188 90.4782 92.7031 114.375 62.5 114.375ZM62.5 122C97.0178 122 125 94.6894 125 61C125 27.3106 97.0178 0 62.5 0C27.9822 0 0 27.3106 0 61C0 94.6894 27.9822 122 62.5 122Z" fill="#EE1818"/>
+        <path d="M85.7005 37.8937C85.6452 37.9477 85.5933 38.0048 85.5451 38.0648L58.4172 71.8027L42.0615 55.8396C39.7733 53.6063 36.0634 53.6063 33.7751 55.8396C31.4869 58.0729 31.4869 61.6938 33.7751 63.9271L54.4505 84.1063C56.7387 86.3396 60.4487 86.3396 62.7369 84.1063C62.7879 84.0565 62.836 84.0041 62.881 83.9492L94.0701 45.8985C96.2748 43.6593 96.2471 40.0996 93.9869 37.8937C91.6987 35.6604 87.9887 35.6604 85.7005 37.8937Z" fill="#EE1818"/>
+        </svg>                      
+      <h2>ยกเลิกเรียบร้อย</h2>
+  </div>
+</div>
+
+  <!-- JS link-->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
