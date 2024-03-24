@@ -35,16 +35,26 @@
         </div>
 <!--Booking status-->
         <div class="rightside-content">
-            <div class="search-group">
-                <form class="search-wrap" action="/action.php" method="post">
-                    <input type="text" placeholder="Search..." name="search-frm" im>
-                    <button type="submit">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                        </svg>
-                    </button>  
-                </form>        
-            </div>
+            <div class="content">
+                <div class="search-bar">
+                  <div class="dropdown">
+                    <div id="drop-text" class="dropdown-text">
+                      <span id="span">Everything</span>
+                        <i id="icon" class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul id="list" class="dropdown-list">
+                      <li class="dropdown-list-item">Everything</li>
+                      <li class="dropdown-list-item">ID</li>
+                      <li class="dropdown-list-item">Name</li>
+                      <li class="dropdown-list-item">Email</li>
+                    </ul>
+                  </div>
+                  <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search anything..." />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>   
+                </div>    
+              </div>
             <h3>แก้ไขการจอง</h3>
             <div class="booking-container">
                 <p>information failed</p>
