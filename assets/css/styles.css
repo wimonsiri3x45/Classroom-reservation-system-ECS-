@@ -550,8 +550,22 @@ button[type="submit"]:hover {
   background-color: var(--white);
   width: 10%;
   margin: 10% auto;
-  padding: 20px;
+  padding: 10px;
 }
+
+.popup-window.small img{
+  border-radius: 10px;
+  margin: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.popup-window div{
+  margin: 10px;
+  text-align: left;
+  grid-template-columns: 1fr 1fr;
+}
+
 
 .popup-window h1{
   color: var(--orange);
