@@ -66,7 +66,6 @@
         <th>Location</th>
         <th>Option</th>
       </tr>
-
       <tr>
         <td>501</td>
         <td>m.501</td>
@@ -76,7 +75,6 @@
         <td>
           <div class="dropdown-op">
             <button class="dropbtn-op">Option <i id="icon" class="fa-solid fa-chevron-down"></i></button>
-
             <div class="dropdown-content-op">
               <a data-target="look-room" data-toggle="popup" >Look</a>
               <a data-target="edit-classroom" data-toggle="popup" >Edit</a>
@@ -88,7 +86,7 @@
     </table>
   </div>
 
-<!-- popup look room -->
+  <!-- popup look room -->
   <div id="look-room" class="popup">
     <div class="popup-window small">
       <span class="close" data-dismiss="popup">&times;</span>
@@ -112,60 +110,60 @@
   </div>
   </div>
 
-    <!-- popup booking -->
-    <div id="booking" class="popup">
-      <div class="popup-window large">
-        <span class="close" data-dismiss="popup">&times;</span>
-        <h1>Classroom reservation form</h1>
-        <!-- เพิ่มฐานข้อมูล -->
-        <form action="/">
-          <div class="wrap-form">
-            <div class="form-group2">
-              <label>Classroom</label>
-              <input type="text" class="form-input">
-            </div>
-            <div class="form-group2">
-              <label>Date time</label>
-              <label>start</label>
-              <input type="time" class="form-input">
-              <input type="date" class="form-input">
-            </div>
-            <div class="form-group2">
-              <label>Date time</label>
-              <label>end</label>
-              <input type="time" class="form-input">
-              <input type="date" class="form-input">
-            </div>
+  <!-- popup booking -->
+  <div id="booking" class="popup">
+    <div class="popup-window large">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <h1>Classroom reservation form</h1>
+      <!-- เพิ่มฐานข้อมูล -->
+      <form action="/">
+        <div class="wrap-form">
+          <div class="form-group2">
+            <label>Classroom</label>
+            <input type="text" class="form-input">
           </div>
-          <div class="wrap-form">
-            <div class="form-group2">
-              <label>Equipment</label>
-              <input type="text" class="form-input">                    
-            </div>
-            <div class="form-group2">
-              <label>Capacity</label>
-              <input type="number" class="form-input">
-            </div>
-            <div class="form-group2">
-              <label>Note</label>
-              <input type="text" class="form-input">
-            </div>
+          <div class="form-group2">
+            <label>Date time</label>
+            <label>start</label>
+            <input type="time" class="form-input">
+            <input type="date" class="form-input">
           </div>
-          <input type="submit" value="Submit" data-dismiss="popup" data-target="booked" data-toggle="popup" class="button-green">
-          <input type="reset" value="Reset" class="button-red">
-        </form>
-      </div>
-      </div>
-      <div id="booked" class="popup">
-      <div class="popup-window small">
-          <span class="close" data-dismiss="popup">&times;</span>
-          <svg width="125" height="122" viewBox="0 0 125 122" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M62.5 114.375C32.2969 114.375 7.8125 90.4782 7.8125 61C7.8125 31.5218 32.2969 7.625 62.5 7.625C92.7031 7.625 117.188 31.5218 117.188 61C117.188 90.4782 92.7031 114.375 62.5 114.375ZM62.5 122C97.0178 122 125 94.6894 125 61C125 27.3106 97.0178 0 62.5 0C27.9822 0 0 27.3106 0 61C0 94.6894 27.9822 122 62.5 122Z" fill="#05E300"/>
-            <path d="M85.7005 37.8937C85.6452 37.9477 85.5933 38.0048 85.5451 38.0648L58.4172 71.8027L42.0615 55.8396C39.7733 53.6063 36.0634 53.6063 33.7751 55.8396C31.4869 58.0729 31.4869 61.6938 33.7751 63.9271L54.4505 84.1063C56.7387 86.3396 60.4487 86.3396 62.7369 84.1063C62.7879 84.0565 62.836 84.0041 62.881 83.9492L94.0701 45.8985C96.2748 43.6593 96.2471 40.0996 93.9869 37.8937C91.6987 35.6604 87.9887 35.6604 85.7005 37.8937Z" fill="#05E300"/>
-          </svg>                       
-          <h2>จองห้องเรียบร้อย</h2>
-      </div>
-      </div>
+          <div class="form-group2">
+            <label>Date time</label>
+            <label>end</label>
+            <input type="time" class="form-input">
+            <input type="date" class="form-input">
+          </div>
+        </div>
+        <div class="wrap-form">
+          <div class="form-group2">
+            <label>Equipment</label>
+            <input type="text" class="form-input">                    
+          </div>
+          <div class="form-group2">
+            <label>Capacity</label>
+            <input type="number" class="form-input">
+          </div>
+          <div class="form-group2">
+            <label>Note</label>
+            <input type="text" class="form-input">
+          </div>
+        </div>
+        <input type="submit" value="Submit" data-dismiss="popup" data-target="booked" data-toggle="popup" class="button-green">
+        <input type="reset" value="Reset" class="button-red">
+      </form>
+    </div>
+  </div>
+  <div id="booked" class="popup">
+    <div class="popup-window small">
+      <span class="close" data-dismiss="popup">&times;</span>
+        <svg width="125" height="122" viewBox="0 0 125 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M62.5 114.375C32.2969 114.375 7.8125 90.4782 7.8125 61C7.8125 31.5218 32.2969 7.625 62.5 7.625C92.7031 7.625 117.188 31.5218 117.188 61C117.188 90.4782 92.7031 114.375 62.5 114.375ZM62.5 122C97.0178 122 125 94.6894 125 61C125 27.3106 97.0178 0 62.5 0C27.9822 0 0 27.3106 0 61C0 94.6894 27.9822 122 62.5 122Z" fill="#05E300"/>
+        <path d="M85.7005 37.8937C85.6452 37.9477 85.5933 38.0048 85.5451 38.0648L58.4172 71.8027L42.0615 55.8396C39.7733 53.6063 36.0634 53.6063 33.7751 55.8396C31.4869 58.0729 31.4869 61.6938 33.7751 63.9271L54.4505 84.1063C56.7387 86.3396 60.4487 86.3396 62.7369 84.1063C62.7879 84.0565 62.836 84.0041 62.881 83.9492L94.0701 45.8985C96.2748 43.6593 96.2471 40.0996 93.9869 37.8937C91.6987 35.6604 87.9887 35.6604 85.7005 37.8937Z" fill="#05E300"/>
+        </svg>                       
+        <h2>จองห้องเรียบร้อย</h2>
+    </div>
+  </div>
 
   <!-- popup add classroom -->
   <div id="add-classroom" class="popup">
