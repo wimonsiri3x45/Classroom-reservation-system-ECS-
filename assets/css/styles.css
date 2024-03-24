@@ -596,6 +596,19 @@ button[type="submit"]:hover {
   flex-direction: column;
 }
 
+.form-group2 label{
+  text-align: left;
+  margin-left: 10px;
+}
+
+.form-group2 label.checkbox{
+  text-align: right;
+}
+
+input.checkbox{
+  margin: 5px;
+}
+
 input.form-input {
   border: none;
   border-radius: 5px;

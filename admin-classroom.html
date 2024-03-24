@@ -53,7 +53,7 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>   
     </div>
-    <a href="" class="button-orange"> + Room </a></div>
+    <a data-target="add-classroom" data-toggle="popup" class="button-orange"> + Classroom </a></div>
     
   </div>
 
@@ -64,6 +64,7 @@
         <th>Name</th>
         <th>type</th>
         <th>Capacity</th>
+        <th>Location</th>
         <th>Option</th>
       </tr>
 
@@ -71,22 +72,192 @@
         <td>501</td>
         <td>m.501</td>
         <td>Lecture</td>
-        <td>สวัสดี วันจันทร์</td>
+        <td>27/30</td>
+        <td>อาคารวิศวะ ชั้น5</td>
         <td>
           <div class="dropdown-op">
             <button class="dropbtn-op">Option <i id="icon" class="fa-solid fa-chevron-down"></i></button>
 
             <div class="dropdown-content-op">
-              <a class="myBtn_multi">Look</a>
-
-              <a id="openPopupBtn">Edit</a>
-
-              <a id="openPopupBtn">Delete</a>
+              <a data-target="look-room" data-toggle="popup" >Look</a>
+              <a data-target="edit-classroom" data-toggle="popup" >Edit</a>
+              <a data-target="delete-room" data-toggle="popup" >Delete</a>
             </div>
           </div>
         </td>
       </tr>
     </table>
+  </div>
+
+<!-- popup look user -->
+  <div id="look-room" class="popup">
+    <div class="popup-window small">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <h3>630911111</h3>
+    <h1>สวัสดี วันจันทร์</h1>
+    <p>นักศึกษา</p>
+    <p>เบอร์โทร: 0800000000   Email: สวัสดี@email.com</p>
+    <p>Username: Password: </p>
+  </div>
+  </div>
+
+  <!-- popup add classroom -->
+  <div id="add-classroom" class="popup">
+  <div class="popup-window large">
+    <span class="close" data-dismiss="popup">&times;</span>
+    <h1>Add Classroom</h1>
+    <!-- เพิ่มฐานข้อมูล -->
+    <form action="/">
+      <div class="wrap-form">
+        <div class="form-group2">
+          <label>ID</label>
+          <input type="text" class="form-input">
+        </div>
+        <div class="form-group2">
+          <label>Classroom name</label>
+          <input type="text" class="form-input">
+        </div>
+        <div class="form-group2">
+          <label for="type-room">Type room</label>
+          <select id="type-room" name="type-room">
+            <option value="lecture">Lecture</option>
+            <option value="lab">Lab</option>
+          </select>
+        </div>
+      </div>
+      <div class="wrap-form">
+        <div class="form-group2">
+          <label>Capacity</label>
+          <input type="number" class="form-input">                    
+        </div>
+        <div class="form-group2">
+          <label>Location</label>
+          <input type="text" class="form-input">
+        </div>
+        <div class="form-group2">
+          <label>Equipment</label>
+          <input type="text" class="form-input">
+          <!--
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="com" class="checkbox">
+          <label for="vehicle1" class="checkbox"> Computer</label>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="projector">
+          <label for="vehicle2" class="checkbox"> Projector </label>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="microphone">
+          <label for="vehicle3" class="checkbox"> Microphone</label>-->
+        </div>
+      </div>
+      <div class="wrap-form">
+        <div class="form-group2">
+          <label>Images Classroom</label>
+          <input type="file" class="form-input">
+        </div>
+      </div>
+      <input type="submit" value="Submit" data-dismiss="popup" data-target="added" data-toggle="popup" class="button-green">
+      <input type="reset" value="Reset" class="button-red">
+    </form>
+  </div>
+  </div>
+  <div id="added" class="popup">
+  <div class="popup-window small">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <svg width="125" height="122" viewBox="0 0 125 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M62.5 114.375C32.2969 114.375 7.8125 90.4782 7.8125 61C7.8125 31.5218 32.2969 7.625 62.5 7.625C92.7031 7.625 117.188 31.5218 117.188 61C117.188 90.4782 92.7031 114.375 62.5 114.375ZM62.5 122C97.0178 122 125 94.6894 125 61C125 27.3106 97.0178 0 62.5 0C27.9822 0 0 27.3106 0 61C0 94.6894 27.9822 122 62.5 122Z" fill="#05E300"/>
+        <path d="M85.7005 37.8937C85.6452 37.9477 85.5933 38.0048 85.5451 38.0648L58.4172 71.8027L42.0615 55.8396C39.7733 53.6063 36.0634 53.6063 33.7751 55.8396C31.4869 58.0729 31.4869 61.6938 33.7751 63.9271L54.4505 84.1063C56.7387 86.3396 60.4487 86.3396 62.7369 84.1063C62.7879 84.0565 62.836 84.0041 62.881 83.9492L94.0701 45.8985C96.2748 43.6593 96.2471 40.0996 93.9869 37.8937C91.6987 35.6604 87.9887 35.6604 85.7005 37.8937Z" fill="#05E300"/>
+      </svg>                       
+      <h2>เพิ่ม Classroom เรียบร้อย</h2>
+  </div>
+  </div>
+
+  <!-- popup edit-classroom -->
+  <div id="edit-classroom" class="popup">
+    <div class="popup-window large">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <h1>Add Classroom</h1>
+      <!-- เพิ่มฐานข้อมูล -->
+      <form action="/">
+        <div class="wrap-form">
+          <div class="form-group2">
+            <label>ID</label>
+            <input type="text" class="form-input" value="501"> 
+          </div>
+          <div class="form-group2">
+            <label>Classroom name</label>
+            <input type="text" class="form-input" value="ท.501">
+          </div>
+          <div class="form-group2">
+            <label for="type-room">Type room</label>
+            <select id="type-room" name="type-room" value="lab">
+              <option value="lecture">Lecture</option>
+              <option value="lab">Lab</option>
+            </select>
+          </div>
+        </div>
+        <div class="wrap-form">
+          <div class="form-group2">
+            <label>Capacity</label>
+            <input type="number" class="form-input" value="30">                    
+          </div>
+          <div class="form-group2">
+            <label>Location</label>
+            <input type="text" class="form-input" value="อาคารวิศวะ ชั้น5">
+          </div>
+          <div class="form-group2">
+            <label>Equipment</label>
+            <input type="text" class="form-input" value="คอมพิวเตอร์,โปรเจคเตอร์,ไมโครโฟน">
+            <!--
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="com" class="checkbox">
+            <label for="vehicle1" class="checkbox"> Computer</label>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="projector">
+            <label for="vehicle2" class="checkbox"> Projector </label>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="microphone">
+            <label for="vehicle3" class="checkbox"> Microphone</label>-->
+          </div>
+        </div>
+        <div class="wrap-form">
+          <div class="form-group2">
+            <label>Images Classroom</label>
+            <input type="file" class="form-input">
+          </div>
+        </div>
+        <input type="submit" value="Submit" data-dismiss="popup" data-target="edited" data-toggle="popup" class="button-green">
+        <input type="reset" value="Reset" class="button-red">
+      </form>
+    </div>
+  </div>
+  <div id="edited" class="popup">
+    <div class="popup-window small">
+        <span class="close" data-dismiss="popup">&times;</span>
+        <svg width="125" height="122" viewBox="0 0 125 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M62.5 114.375C32.2969 114.375 7.8125 90.4782 7.8125 61C7.8125 31.5218 32.2969 7.625 62.5 7.625C92.7031 7.625 117.188 31.5218 117.188 61C117.188 90.4782 92.7031 114.375 62.5 114.375ZM62.5 122C97.0178 122 125 94.6894 125 61C125 27.3106 97.0178 0 62.5 0C27.9822 0 0 27.3106 0 61C0 94.6894 27.9822 122 62.5 122Z" fill="#05E300"/>
+          <path d="M85.7005 37.8937C85.6452 37.9477 85.5933 38.0048 85.5451 38.0648L58.4172 71.8027L42.0615 55.8396C39.7733 53.6063 36.0634 53.6063 33.7751 55.8396C31.4869 58.0729 31.4869 61.6938 33.7751 63.9271L54.4505 84.1063C56.7387 86.3396 60.4487 86.3396 62.7369 84.1063C62.7879 84.0565 62.836 84.0041 62.881 83.9492L94.0701 45.8985C96.2748 43.6593 96.2471 40.0996 93.9869 37.8937C91.6987 35.6604 87.9887 35.6604 85.7005 37.8937Z" fill="#05E300"/>
+        </svg>                       
+        <h2>แก้ไขข้อมูลเรียบร้อย</h2>
+    </div>
+  </div>
+
+  <!-- popup delete room -->
+  <div id="delete-room" class="popup">
+  <div class="popup-window small">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <svg width="142" height="126" viewBox="0 0 142 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40.2911 1.15327C41.1233 0.414842 42.252 0 43.4289 0H98.5711C99.748 0 100.877 0.414842 101.709 1.15327L140.7 35.7513C141.532 36.4897 142 37.4912 142 38.5355V87.4645C142 88.5088 141.532 89.5103 140.7 90.2487L101.709 124.847C100.877 125.585 99.748 126 98.5711 126H43.4289C42.252 126 41.1233 125.585 40.2911 124.847L1.29971 90.2487C0.467521 89.5103 0 88.5088 0 87.4645V38.5355C0 37.4912 0.467521 36.4897 1.29971 35.7513L40.2911 1.15327ZM45.267 7.875L8.875 40.1665V85.8335L45.267 118.125H96.733L133.125 85.8335V40.1665L96.733 7.875H45.267Z" fill="#F06B32"/>
+        <path d="M62.1387 86.625C62.1387 82.2758 66.1122 78.75 71.0137 78.75C75.9152 78.75 79.8887 82.2758 79.8887 86.625C79.8887 90.9742 75.9152 94.5 71.0137 94.5C66.1122 94.5 62.1387 90.9742 62.1387 86.625Z" fill="#F06B32"/>
+        <path d="M63.0081 39.3359C62.5353 35.1405 66.2482 31.5 71 31.5C75.7518 31.5 79.4647 35.1405 78.9919 39.3359L75.8791 66.957C75.6284 69.1812 73.5191 70.875 71 70.875C68.4809 70.875 66.3716 69.1812 66.121 66.957L63.0081 39.3359Z" fill="#F06B32"/>
+        </svg>        
+      <h2>ต้องการลบ Classroom นี้ใช่หรือไม่?</h2>
+      <a data-dismiss="popup" data-target="deleted" data-toggle="popup" class="button-green">Yes</a>
+      <a data-dismiss="popup" class="button-red">No</a>
+  </div>
+  </div>
+  <div id="deleted" class="popup">
+  <div class="popup-window small">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <svg width="125" height="122" viewBox="0 0 125 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M62.5 114.375C32.2969 114.375 7.8125 90.4782 7.8125 61C7.8125 31.5218 32.2969 7.625 62.5 7.625C92.7031 7.625 117.188 31.5218 117.188 61C117.188 90.4782 92.7031 114.375 62.5 114.375ZM62.5 122C97.0178 122 125 94.6894 125 61C125 27.3106 97.0178 0 62.5 0C27.9822 0 0 27.3106 0 61C0 94.6894 27.9822 122 62.5 122Z" fill="#EE1818"/>
+        <path d="M85.7005 37.8937C85.6452 37.9477 85.5933 38.0048 85.5451 38.0648L58.4172 71.8027L42.0615 55.8396C39.7733 53.6063 36.0634 53.6063 33.7751 55.8396C31.4869 58.0729 31.4869 61.6938 33.7751 63.9271L54.4505 84.1063C56.7387 86.3396 60.4487 86.3396 62.7369 84.1063C62.7879 84.0565 62.836 84.0041 62.881 83.9492L94.0701 45.8985C96.2748 43.6593 96.2471 40.0996 93.9869 37.8937C91.6987 35.6604 87.9887 35.6604 85.7005 37.8937Z" fill="#EE1818"/>
+      </svg>                      
+      <h2>ลบ Classroom เรียบร้อย</h2>
+  </div>
   </div>
   
 
