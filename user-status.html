@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image-icon" href="assets/images/icon.jpg"> 
+  <title>CLASSROOM RESERVATION SYSTEM - Home Page</title>
+  <!-- CSS link-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+/>
+</head>
+
+<body>
+
+  <div class="header-profile">
+    <a href="user-home.html">
+      <img src="assets/images/logoECS.png" alt="" height="80" width="80">
+    </a>
+    <div>
+      <h1>Classroom reservation system</h1>
+      <p>Deprtment of Elecrical Engineering Faculty of Engineering and Industrial Technology<br> Silpakorn University</p>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M59.8125 32.625C59.8125 41.6341 52.5091 48.9375 43.5 48.9375C34.4909 48.9375 27.1875 41.6341 27.1875 32.625C27.1875 23.6159 34.4909 16.3125 43.5 16.3125C52.5091 16.3125 59.8125 23.6159 59.8125 32.625Z" fill="black"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 43.5C0 19.4756 19.4756 0 43.5 0C67.5244 0 87 19.4756 87 43.5C87 67.5244 67.5244 87 43.5 87C19.4756 87 0 67.5244 0 43.5ZM43.5 5.4375C22.4787 5.4375 5.4375 22.4787 5.4375 43.5C5.4375 52.4905 8.55458 60.753 13.767 67.2657C17.6334 61.0373 26.1252 54.375 43.5 54.375C60.8748 54.375 69.3666 61.0373 73.233 67.2657C78.4454 60.753 81.5625 52.4905 81.5625 43.5C81.5625 22.4787 64.5213 5.4375 43.5 5.4375Z" fill="black"/>
+    </svg>
+    <p>ดวงจันทร์ ใจดี <br> *****@gmail.com</p>
+    <a href="user-home.html">Home</a>
+    <a href="user-profile.html">Personal information</a>
+    <a class="active" href="user-status.html">Booking status</a>
+    <a href="index.html" class="button-orange">LOG OUT</a>
+  </div>
+
+  <div class="content-profile">
+
+    <div class="content">
+        <div class="search-bar">
+          <div class="dropdown">
+            <div id="drop-text" class="dropdown-text">
+              <span id="span">Everything</span>
+                <i id="icon" class="fa-solid fa-chevron-down"></i>
+            </div>
+            <ul id="list" class="dropdown-list">
+              <li class="dropdown-list-item">Everything</li>
+              <li class="dropdown-list-item">Date</li>
+              <li class="dropdown-list-item">Classroom</li>
+              <li class="dropdown-list-item">Booker's name</li>
+              <li class="dropdown-list-item">Status</li>
+            </ul>
+          </div>
+          <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search anything..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>   
+        </div>
+      </div>
+
+    <div class="table-container">
+        <table id="customers">
+          <tr>
+            <th>No.</th>
+            <th>Date</th>
+            <th>Classroom</th>
+            <th>Booker's name</th>
+            <th>Capacity</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>01/03/67 [12:00-13:00 น.]</td>
+            <td>ท.501</td>
+            <td>สวัสดี วันจันทร์</td>
+            <td>27/30</td>
+            <td>Waiting</td>
+            <td class="button">
+                <a data-target="canceled" data-toggle="popup" class="button-red">Cancel</a></div>
+            </td>
+          </tr>
+        </table>
+    </div>
+  </div>
+  
+  <!-- popup canceled -->
+  <div id="canceled" class="popup">
+    <div class="popup-window small">
+        <span class="close" data-dismiss="popup">&times;</span>
+        <svg width="125" height="122" viewBox="0 0 125 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M62.5 114.375C32.2969 114.375 7.8125 90.4782 7.8125 61C7.8125 31.5218 32.2969 7.625 62.5 7.625C92.7031 7.625 117.188 31.5218 117.188 61C117.188 90.4782 92.7031 114.375 62.5 114.375ZM62.5 122C97.0178 122 125 94.6894 125 61C125 27.3106 97.0178 0 62.5 0C27.9822 0 0 27.3106 0 61C0 94.6894 27.9822 122 62.5 122Z" fill="#EE1818"/>
+          <path d="M85.7005 37.8937C85.6452 37.9477 85.5933 38.0048 85.5451 38.0648L58.4172 71.8027L42.0615 55.8396C39.7733 53.6063 36.0634 53.6063 33.7751 55.8396C31.4869 58.0729 31.4869 61.6938 33.7751 63.9271L54.4505 84.1063C56.7387 86.3396 60.4487 86.3396 62.7369 84.1063C62.7879 84.0565 62.836 84.0041 62.881 83.9492L94.0701 45.8985C96.2748 43.6593 96.2471 40.0996 93.9869 37.8937C91.6987 35.6604 87.9887 35.6604 85.7005 37.8937Z" fill="#EE1818"/>
+          </svg>                      
+        <h2>ยกเลิกเรียบร้อย</h2>
+    </div>
+  </div>
+
+
+  <!-- JS link-->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
