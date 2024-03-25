@@ -15,7 +15,7 @@
 <body>
 
   <div class="header">
-    <a href="admin.html">
+    <a href="admin-home.html">
       <img src="assets/images/logoECS.png" alt="" height="80" width="80">
     </a>
     <div>
@@ -25,12 +25,12 @@
   </div>
 
   <div id="navbar">
-    <a href="admin.html">Home</a>
+    <a href="admin-home.html">Home</a>
     <a class="active" href="admin-list.html">Reservation List</a>
     <a href="admin-classroom.html">Classroom</a>
     <a href="admin-user.html">User</a>
     <a href="index.html" class="button-logout" style="float:right"><span>Log out</span></a>
-    <a href="admin-profile.html" style="float:right" >Profile</a>
+    <a data-target="edit-profile" data-toggle="popup" style="float:right">Profile</a>
   </div>
   
   <div class="content">
@@ -139,6 +139,96 @@
         </svg>                      
       <h2>ยกเลิกเรียบร้อย</h2>
   </div>
+</div>
+  <!-- popup edit-profile -->
+  <div id="edit-profile" class="popup">
+    <div class="popup-window large">
+      <span class="close" data-dismiss="popup">&times;</span>
+      <h1>My profile</h1>
+      <!-- เพิ่มฐานข้อมูล (แก้ตรง value ) -->
+      <form action="/">
+        <div class="wrap-form">
+          <div class="form-group2">
+            <label>Student ID</label>
+            <input type="text" class="form-input" value="630911111">
+          </div>
+          <div class="form-group2">
+            <label>First name</label>
+            <input type="text" class="form-input" value="สวัสดี">
+          </div>
+          <div class="form-group2">
+            <label>Last name</label>
+            <input type="text" class="form-input" value="วันจันทร์">                    
+          </div>
+        </div>
+        <div class="wrap-form">
+          <div class="form-group2">
+            <label for="status-user">Status</label>
+            <select id="status-user" name="status-user">
+              <option value="student">นักศึกษา</option>
+              <option value="teacher">อาจารย์</option>
+              <option value="personnel">บุคลากร</option>
+            </select>
+          </div>
+          <div class="form-group2">
+            <label for="phone">Phone number</label>
+            <input type="tel" class="form-input" value="0800000000">
+          </div>
+          <div class="form-group2">
+            <label>Email</label>
+            <input type="email" class="form-input" value="สวัสดี@email.com">
+          </div>
+        </div>
+        <div class="wrap-form">
+          <div class="form-group2">
+            <label>Username</label>
+            <input type="text" class="form-input" value="วันจันทร์">
+          </div>
+          <div class="form-group2">
+            <label>Password</label>
+            <input type="password" class="form-input" value="123456">
+          </div>
+        </div>
+        <input type="submit" value="Submit" data-dismiss="popup" data-target="edited-profile" data-toggle="popup" class="button-green">
+        <input type="reset" value="Reset" class="button-red">
+        <a data-dismiss="popup" data-target="edit-password" data-toggle="popup" class="button-orange">change password</a>
+      </form>
+    </div>
+</div>
+<div id="edit-password" class="popup">
+      <div class="popup-window large">
+        <span class="close" data-dismiss="popup">&times;</span>
+        <h1>Change password</h1>
+        <!-- เพิ่มฐานข้อมูล (แก้ตรง value ) -->
+        <form action="/">
+          <div class="wrap-form">
+            <div class="form-group2">
+              <label>Old password</label>
+              <input type="password" class="form-input" value="12345">
+            </div>
+            <div class="form-group2">
+              <label>New password</label>
+              <input type="password" class="form-input">
+            </div>
+            <div class="form-group2">
+              <label>Confirm password</label>
+              <input type="password" class="form-input">                    
+            </div>
+          </div>
+          <input type="submit" value="Submit" data-dismiss="popup" data-target="edited-profile" data-toggle="popup" class="button-green">
+          <input type="reset" value="Reset" class="button-red">
+        </form>
+      </div>
+</div>
+<div id="edited-profile" class="popup">
+      <div class="popup-window small">
+          <span class="close" data-dismiss="popup">&times;</span>
+          <svg width="125" height="122" viewBox="0 0 125 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M62.5 114.375C32.2969 114.375 7.8125 90.4782 7.8125 61C7.8125 31.5218 32.2969 7.625 62.5 7.625C92.7031 7.625 117.188 31.5218 117.188 61C117.188 90.4782 92.7031 114.375 62.5 114.375ZM62.5 122C97.0178 122 125 94.6894 125 61C125 27.3106 97.0178 0 62.5 0C27.9822 0 0 27.3106 0 61C0 94.6894 27.9822 122 62.5 122Z" fill="#05E300"/>
+            <path d="M85.7005 37.8937C85.6452 37.9477 85.5933 38.0048 85.5451 38.0648L58.4172 71.8027L42.0615 55.8396C39.7733 53.6063 36.0634 53.6063 33.7751 55.8396C31.4869 58.0729 31.4869 61.6938 33.7751 63.9271L54.4505 84.1063C56.7387 86.3396 60.4487 86.3396 62.7369 84.1063C62.7879 84.0565 62.836 84.0041 62.881 83.9492L94.0701 45.8985C96.2748 43.6593 96.2471 40.0996 93.9869 37.8937C91.6987 35.6604 87.9887 35.6604 85.7005 37.8937Z" fill="#05E300"/>
+          </svg>                       
+          <h2>บันทึกข้อมูลเรียบร้อย</h2>
+      </div>
 </div>
 
   <!-- JS link-->
